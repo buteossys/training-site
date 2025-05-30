@@ -2,6 +2,8 @@
 
 A lightweight web application for internal sales training and certification. This application allows sales team members to complete training modules, take quizzes, and submit their results.
 
+Visit the site: [Sales Training](https://buteossystems.thefairshoppe.com)
+
 ## Features
 
 - Multi-step training workflow
