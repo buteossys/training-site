@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Training - Buteos Systems</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="assets/aws-sdk.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="assets/logo.png" alt="Buteos Systems Logo">
+             <h1>Sales Team Training Portal</h1>
+        </div>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Training & Resources</a>
+                    <div class="dropdown-content">
+                        <a href="training.html">Sales Training</a>
+                        <a href="pricing.html">Pricing Table</a>
+                        <a href="funnel.html">Sales Funnel</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div id="training-workflow">
+            <section id="user-info-form" class="training-step active-step">
+                <h2>Trainee Information</h2>
+                <form id="traineeForm">
+                    <div>
+                        <label for="fullName">Full Name:</label>
+                        <input type="text" id="fullName" name="fullName" required maxlength="100">
+                    </div>
+                    <div>
+                        <label for="phoneNumber">Phone Number:</label>
+                        <input type="tel" id="phoneNumber" name="phoneNumber" required>
+                    </div>
+                    <div>
+                        <label for="emailAddress">Email Address:</label>
+                        <input type="email" id="emailAddress" name="emailAddress" required>
+                    </div>
+                    <div>
+                        <label for="employeeId">Employee ID:</label>
+                        <input type="text" id="employeeId" name="employeeId" required>
+                    </div>
+                    <button type="submit" class="nav-button">Start Training</button>
+                </form>
+            </section>
+
+            <section id="module1-content" class="training-step">
+                <h2>Module 1: Understanding Our Services & Pricing Structure</h2>
+                <div class="module-content-area">
+                    <p>Loading Module 1 Content...</p>
+                </div>
+                <button class="nav-button next-button">Next: Module 1 Quiz</button>
+            </section>
+
+            <section id="module1-quiz" class="training-step">
+                <h2>Module 1 Quiz</h2>
+                <form id="quizFormModule1" class="quiz-form">
+                    </form>
+                <button class="nav-button prev-button">Previous: Module Content</button>
+                <button class="nav-button next-button">Next: Module 2</button>
+            </section>
+
+            <section id="module2-content" class="training-step">
+                <h2>Module 2: Mastering Key Industry Concepts</h2>
+                <div class="module-content-area">
+                     <p>Loading Module 2 Content...</p>
+                </div>
+                <button class="nav-button prev-button">Previous: Module 1 Quiz</button>
+                <button class="nav-button next-button">Next: Module 2 Quiz</button>
+            </section>
+
+            <section id="module2-quiz" class="training-step">
+                <h2>Module 2 Quiz</h2>
+                <form id="quizFormModule2" class="quiz-form">
+                    </form>
+                <button class="nav-button prev-button">Previous: Module Content</button>
+                <button class="nav-button next-button">Next: Module 3</button>
+            </section>
+
+            <section id="module3-content" class="training-step">
+                <h2>Module 3: Excelling in Outside Sales: Skills & Strategies</h2>
+                <div class="module-content-area">
+                    <p>Loading Module 3 Content...</p>
+                </div>
+                <button class="nav-button prev-button">Previous: Module 2 Quiz</button>
+                <button class="nav-button next-button">Next: Module 3 Quiz</button>
+            </section>
+
+            <section id="module3-quiz" class="training-step">
+                <h2>Module 3 Quiz</h2>
+                <form id="quizFormModule3" class="quiz-form">
+                    </form>
+                <button class="nav-button prev-button">Previous: Module Content</button>
+                <button class="nav-button next-button">Next: Final Review</button>
+            </section>
+
+            <section id="final-review" class="training-step">
+                <h2>Final Review & Submission</h2>
+                <p>Are you ready to submit your answers?</p>
+                <div id="review-summary">
+                    </div>
+                <button id="submitAnswers" class="nav-button submit-button">Submit Answers</button>
+                <button id="returnToPrevious" class="nav-button prev-button">Return to Previous Slides</button>
+                <p id="submissionStatus"></p>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Buteos Systems Sales Department - Internal Use Only</p>
+    </footer>
+
+    <script src="assets/navigation.js"></script>
+    <script src="assets/s3-handler.js"></script>
+    <script src="assets/training.js"></script>
+</body>
+</html>

@@ -1,0 +1,533 @@
+/* General Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+/* Header & Navigation */
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    border-bottom: #0779e4 3px solid;
+    position: relative;
+    z-index: 1000; /* Ensure header stays on top */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header .logo {
+    padding-left: 20px;
+    flex: 0 0 auto;
+}
+
+header .logo h1 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+header .logo img {
+    max-height: 125px; /* Adjust as needed */
+    vertical-align: middle;
+}
+
+nav#main-nav {
+    padding-right: 20px;
+    flex: 0 0 auto;
+}
+
+nav#main-nav ul {
+    padding: 0;
+    list-style: none;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav#main-nav ul li {
+    margin-left: 20px;
+}
+
+nav#main-nav a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+nav#main-nav a:hover,
+nav#main-nav .dropdown:hover .dropbtn {
+    color: #0779e4;
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1001; /* Higher than header */
+    border-top: #0779e4 3px solid;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-transform: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+    color: #333;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/* Main Content Area */
+main {
+    padding: 20px 0;
+    position: relative;
+    z-index: 1; /* Lower than header */
+}
+
+main section {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+}
+
+main h2 {
+    color: #0779e4;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+.hero {
+    text-align: center;
+    padding: 40px 20px;
+    background: #eef;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    background: #0779e4;
+    color: #fff;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #055cb0;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 30px;
+    font-size: 0.9rem;
+}
+
+/* Training Page Specifics */
+.training-step {
+    display: none; /* Hidden by default, JS will show active step */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.training-step.active-step {
+    display: block;
+}
+
+#training-workflow form div {
+    margin-bottom: 15px;
+}
+
+#training-workflow label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#training-workflow input[type="text"],
+#training-workflow input[type="tel"],
+#training-workflow input[type="email"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.nav-button, .submit-button {
+    background-color: #0779e4;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.nav-button:hover, .submit-button:hover {
+    background-color: #055cb0;
+}
+
+.prev-button {
+    background-color: #6c757d;
+}
+.prev-button:hover {
+    background-color: #5a6268;
+}
+
+.quiz-form .question-block {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+}
+
+.quiz-form .question-block p {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.quiz-form .question-block label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: normal;
+}
+
+.quiz-form .question-block input[type="radio"] {
+    margin-right: 8px;
+}
+
+#submissionStatus {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.module-content-area {
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    background-color: #fdfdfd;
+    border-radius: 4px;
+    min-height: 100px; /* Adjust as needed */
+}
+.module-content-area h3, .module-content-area h4 {
+    color: #333;
+    margin-top: 15px;
+}
+.module-content-area p {
+    margin-bottom: 10px;
+}
+.module-content-area ul, .module-content-area ol {
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+/* Pricing Page Specifics */
+#pricing-tables-container {
+    overflow-x: auto;
+    margin: 0 -20px; /* Compensate for container padding */
+    padding: 0 20px;
+}
+
+#pricing-tables-container table {
+    width: 100%;
+    min-width: 600px; /* Ensure minimum width for readability */
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+}
+
+#pricing-tables-container th,
+#pricing-tables-container td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+#pricing-tables-container th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+#pricing-tables-container td {
+    vertical-align: top;
+}
+
+#pricing-tables-container h3 { /* For table titles */
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: #333;
+    border-bottom: 2px solid #0779e4;
+    padding-bottom: 5px;
+}
+
+
+/* Sales Funnel Page Specifics */
+#sales-funnel-content article {
+    margin-bottom: 25px;
+}
+
+#sales-funnel-content h3 {
+    color: #0779e4;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+#sales-funnel-content h4 {
+    color: #555;
+    margin-top: 15px;
+    margin-bottom: 8px;
+}
+#sales-funnel-content p, #sales-funnel-content ul {
+    margin-bottom: 10px;
+}
+#sales-funnel-content ul {
+    list-style: disc;
+    margin-left: 20px;
+}
+#sales-funnel-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+#sales-funnel-content th, #sales-funnel-content td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+#sales-funnel-content th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+.caption {
+    font-style: italic;
+    font-size: 0.9em;
+    color: #666;
+    text-align: center;
+}
+
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    header .logo {
+        padding-left: 0;
+        margin-bottom: 1rem;
+    }
+
+    nav#main-nav {
+        padding-right: 0;
+        width: 100%;
+    }
+
+    nav#main-nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav#main-nav ul li {
+        margin: 10px 0;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+
+    #pricing-tables-container {
+        margin: 0 -15px;
+        padding: 0 15px;
+    }
+
+    #pricing-tables-container table {
+        font-size: 14px;
+    }
+
+    #pricing-tables-container th,
+    #pricing-tables-container td {
+        padding: 8px 10px;
+    }
+
+    #pricing-tables-container h3 {
+        font-size: 1.2rem;
+        margin: 1rem 0;
+    }
+}
+
+/* Small Screen Adjustments (under 480px) */
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    header .logo h1 {
+        font-size: 1.4rem;
+    }
+
+    header .logo img {
+        max-height: 80px;
+    }
+
+    nav#main-nav a {
+        font-size: 0.8rem;
+    }
+
+    .dropdown-content {
+        min-width: 180px;
+    }
+
+    .dropdown-content a {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+
+    main h2 {
+        font-size: 1.5rem;
+    }
+
+    .module-content-area {
+        padding: 10px;
+    }
+
+    .module-content-area h3 {
+        font-size: 1.2rem;
+    }
+
+    .module-content-area h4 {
+        font-size: 1.1rem;
+    }
+
+    .module-content-area p,
+    .module-content-area li {
+        font-size: 0.9rem;
+    }
+
+    .nav-button, 
+    .submit-button {
+        width: 100%;
+        margin: 5px 0;
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+
+    .quiz-form .question-block {
+        padding: 10px;
+    }
+
+    .quiz-form .question-block p {
+        font-size: 0.95rem;
+    }
+
+    .quiz-form .question-block label {
+        font-size: 0.9rem;
+    }
+
+    #pricing-tables-container {
+        margin: 0 -10px;
+        padding: 0 10px;
+    }
+
+    #pricing-tables-container table {
+        font-size: 12px;
+        min-width: 500px;
+    }
+
+    #pricing-tables-container th,
+    #pricing-tables-container td {
+        padding: 6px 8px;
+    }
+
+    #pricing-tables-container h3 {
+        font-size: 1.1rem;
+    }
+
+    #sales-funnel-content h3 {
+        font-size: 1.2rem;
+    }
+
+    #sales-funnel-content h4 {
+        font-size: 1.1rem;
+    }
+
+    #sales-funnel-content p,
+    #sales-funnel-content li {
+        font-size: 0.9rem;
+    }
+
+    #sales-funnel-content table {
+        font-size: 12px;
+    }
+
+    #sales-funnel-content th,
+    #sales-funnel-content td {
+        padding: 6px;
+    }
+
+    .caption {
+        font-size: 0.8em;
+    }
+}
